@@ -9,6 +9,6 @@ const Router=express.Router();
 Router.post("/post/:id",Posts);
 Router.get("/getPosts",getAllPosts);
 Router.get("/getPost/:id",getPosts);
-Router.get("/getPosts/:id",verifyUser,getAllPostsofUser);
+Router.get("/getPosts/:id",getAllPostsofUser);
 
 export default Router;
