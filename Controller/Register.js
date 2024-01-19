@@ -37,7 +37,7 @@ import jwt from "jsonwebtoken";
          }
            const token=jwt.sign({id:user._id},process.env.JWT);  
 
-      res.cookie("access_token",token,{httpOnly:true}).status(200).json(user);
+      res.cookie("access_token",token,{secure=true}).status(200).json(user);
 
 
     }catch(err){
