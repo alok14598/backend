@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import env from 'dotenv';
-import auth from "../api/Route/Auth.js"
+import Auth from "../api/Route/Auth.js"
 import User from "../api/Route/User.js"
 import userpost from "../api/Route/Post.js"
 import cors from "cors";
@@ -27,7 +27,7 @@ app.get("/",(req,res) => {
     res.send("Welcome to the api page");
 })
 
-app.use("/auth",auth);
+app.use("/auth",Auth);
 app.use("/user",User);
 app.use("/userpost",userpost);
 
